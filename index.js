@@ -14,18 +14,18 @@ let count = 0;
 // function expression to decrease the count
 
 decrease.onclick = function () {
-    counttxt.innerHTML = count -= 1;
+    counttxt.textContent = count -= 1;
 }
 
 // function expression to reset the count
 
 reset.onclick = function () {
     count = 0
-    counttxt.innerHTML = count;
+    counttxt.textContent = count;
 }
 
 // function expression to increase the count
 
 increase.onclick = function () {
-    counttxt.innerHTML = count += 1;
+    counttxt.textContent = count += 1;
 }
