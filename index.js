@@ -9,8 +9,6 @@ let decrease = document.getElementById("decrease");
 let reset = document.getElementById("reset");
 let increase = document.getElementById("increase");
 let count = 0;
-let randomIndex = 0;
-let tempRandom;
 
 // Creating an array to store colours
 
@@ -21,6 +19,10 @@ let colours = ['#92FFF2', '#FF92D3', '#9B92FF', '#E9FF92', '#FD974E',
 in colours array to change the background color of the page and + symbol*/
 
 function changeColour() {
+
+    let randomIndex = 0;
+    let tempRandom;
+
     do {
         tempRandom = Math.floor(Math.random() * colours.length);
     } while (tempRandom === randomIndex);
@@ -31,18 +33,19 @@ function changeColour() {
     }
     
     let colour = colours[randomIndex];
+
+    document.body.style.backgroundColor = colour;
+    increase.style.color = colour;
 }
 
-// if statement to call changeColour() function if counter number is divisible by 10
-
-if (count % 10 == 0){
-    changeColour();
-}
-
-// arrow function expression to decrease the count
+/* arrow function expression to decrease the count 
+and change the colour if count is divisble by 10 */ 
 
 decrease.onclick = () => {
     counttxt.textContent = count -= 1;
+    if (count % 10 == 0) {
+        changeColour();
+    }
 }
 
 // arrow function expression to reset the count
@@ -52,8 +55,13 @@ reset.onclick = () => {
     counttxt.textContent = count;
 }
 
-// arrow function expression to increase the count
+/* arrow function expression to increase the count 
+and change the colour if count is divisble by 10 */
 
 increase.onclick = () => {
     counttxt.textContent = count += 1;
+    if (count % 10 == 0) {
+        changeColour();
+    }
 }
+
