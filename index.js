@@ -21,16 +21,16 @@ let colours = ['#92FFF2', '#FF92D3', '#9B92FF', '#E9FF92', '#FD974E',
 in colours array to change the background color of the page and + symbol*/
 
 function changeColor() {
-
-    tempRandom = Math.floor(Math.random() * colours.length);
-
-    if (tempRandom === randomIndex){
+    do {
         tempRandom = Math.floor(Math.random() * colours.length);
-    }
-    else {
+    } while (tempRandom === randomIndex);
+    
+    
+    if (tempRandom != randomIndex){
         randomIndex = tempRandom;
     }
-
+    
+    let colour = colours[randomIndex];
 }
 
 
