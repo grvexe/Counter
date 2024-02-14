@@ -38,6 +38,14 @@ function changeColour() {
     increase.style.color = colour;
 }
 
+/* resetColour() function to reset background colour and + symbol 
+color to original colour if reset button is pressed */
+
+function resetColour () {
+    document.body.style.backgroundColor = colours[0];
+    increase.style.color = colours[0];
+}
+
 /* arrow function expression to decrease the count 
 and change the colour if count is divisble by 10 */ 
 
@@ -53,6 +61,7 @@ decrease.onclick = () => {
 reset.onclick = () => {
     count = 0
     counttxt.textContent = count;
+    resetColour();
 }
 
 /* arrow function expression to increase the count 
