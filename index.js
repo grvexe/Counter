@@ -10,6 +10,11 @@ let reset = document.getElementById("reset");
 let increase = document.getElementById("increase");
 let count = 0;
 
+// Creating an array to store colours
+
+let colours = ['#92FFF2', '#FF92D3', '#9B92FF', '#E9FF92', '#FD974E', 
+              '#4EFDA9', '#FD4E4E', '#FFD700', '#FD4EEB', '#0085FF',]
+
 
 // arrow function expression to decrease the count
 
