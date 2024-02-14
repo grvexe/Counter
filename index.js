@@ -11,21 +11,21 @@ let increase = document.getElementById("increase");
 let count = 0;
 
 
-// function expression to decrease the count
+// arrow function expression to decrease the count
 
-decrease.onclick = function () {
+decrease.onclick = () => {
     counttxt.textContent = count -= 1;
 }
 
-// function expression to reset the count
+// arrow function expression to reset the count
 
-reset.onclick = function () {
+reset.onclick = () => {
     count = 0
     counttxt.textContent = count;
 }
 
-// function expression to increase the count
+// arrow function expression to increase the count
 
-increase.onclick = function () {
+increase.onclick = () => {
     counttxt.textContent = count += 1;
 }
