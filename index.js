@@ -20,7 +20,7 @@ let colours = ['#92FFF2', '#FF92D3', '#9B92FF', '#E9FF92', '#FD974E',
 /*Creating a function that generates a random number and use it as index 
 in colours array to change the background color of the page and + symbol*/
 
-function changeColor() {
+function changeColour() {
     do {
         tempRandom = Math.floor(Math.random() * colours.length);
     } while (tempRandom === randomIndex);
@@ -33,8 +33,11 @@ function changeColor() {
     let colour = colours[randomIndex];
 }
 
+// if statement to call changeColour() function if counter number is divisible by 10
 
-
+if (count % 10 == 0){
+    changeColour();
+}
 
 // arrow function expression to decrease the count
 
